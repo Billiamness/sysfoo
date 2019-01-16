@@ -40,4 +40,5 @@ jobs:
       # run tests!
       - run: mvn integration-test
       - run: mvn package
-      - run: sudo mv /home/circleci/repo/target/sysfoo.war $CIRCLE_ARTIFACTS/
+      - store_artifacts:
+          path: /home/circleci/repo/target/sysfoo.war 
